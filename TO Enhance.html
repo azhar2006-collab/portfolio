@@ -1,0 +1,56 @@
+<center>
+    <div class="line">
+    <h1>GUESS THE NUMBER </h1>
+    <input id="guessnumber"><button onclick="check()">check</button>
+    <P id="result">You May right or wrong</P>
+    <p id="score">score:10</p>
+  
+    </div>
+    <p>("A Small game using HTML, CSS and JAVASCRIPT")</p>
+
+</center>
+
+<script>
+    var guessnumber=document.getElementById("guessnumber")
+    var result=document.getElementById("result")
+    var score=document.getElementById("score")
+    var randomnumber= Math.floor(Math.random()*10)+1
+    var totalscore=11
+    
+    function check()
+    {
+        var enterednumber = guessnumber.value
+        if(randomnumber==enterednumber)
+    {
+        console.log("right!")
+        result.textContent="Right"
+        alert("YOU WON...")
+
+    }
+    else{
+        totalscore=totalscore-1
+        score.textContent="score:"+totalscore
+         result.textContent="wrong.."
+
+
+    }
+    }
+    
+</script>
+<style>
+    h1{
+        margin-top: 100px;
+    }
+    p{
+        font-size:xx-large;
+    }
+    .line{
+       border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    margin-top: 30px;
+    display: inline-block;
+    width: 625px;
+    padding:20px;
+    }
+</style>
